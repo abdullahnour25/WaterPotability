@@ -13,66 +13,113 @@
     <div class="form-container">
       <h1>Water Quality Prediction</h1>
       <form method="POST">
-        <label for="ph">pH:</label>
-        <input type="number" step="0.01" id="ph" name="ph" required />
+        <label for="ph">pH (Range: 0 - 14):</label>
+        <input
+          type="number"
+          step="0.01"
+          id="ph"
+          name="ph"
+          min="0"
+          max="14"
+          placeholder="0.00 - 14.00"
+          required
+        />
 
-        <label for="hardness">hardness:</label>
+        <label for="hardness">Hardness (Range: 0 - 1000 mg/L):</label>
         <input
           type="number"
           step="0.01"
           id="hardness"
           name="hardness"
+          min="0"
+          max="1000"
+          placeholder="0.00 - 1000.00"
           required
         />
 
-        <label for="solids">Solids:</label>
-        <input type="number" step="0.01" id="solids" name="solids" required />
+        <label for="solids">Solids (Range: 500 - 50000 ppm):</label>
+        <input
+          type="number"
+          step="0.01"
+          id="solids"
+          name="solids"
+          min="500"
+          max="50000"
+          placeholder="500 - 50000"
+          required
+        />
 
-        <label for="chloramines">Chloramines:</label>
+        <label for="chloramines">Chloramines (Range: 0 - 10 mg/L):</label>
         <input
           type="number"
           step="0.01"
           id="chloramines"
           name="chloramines"
+          min="0"
+          max="10"
+          placeholder="0.00 - 10.00"
           required
         />
 
-        <label for="sulfate">Sulfate:</label>
-        <input type="number" step="0.01" id="sulfate" name="sulfate" required />
+        <label for="sulfate">Sulfate (Range: 0 - 500 mg/L):</label>
+        <input
+          type="number"
+          step="0.01"
+          id="sulfate"
+          name="sulfate"
+          min="0"
+          max="500"
+          placeholder="0.00 - 500.00"
+          required
+        />
 
-        <label for="conductivity">Conductivity:</label>
+        <label for="conductivity">Conductivity (Range: 50 - 1000 µS/cm):</label>
         <input
           type="number"
           step="0.01"
           id="conductivity"
           name="conductivity"
+          min="50"
+          max="1000"
+          placeholder="50 - 1000"
           required
         />
 
-        <label for="organic-carbon">Organic Carbon:</label>
+        <label for="organic-carbon">Organic Carbon (Range: 0 - 20 mg/L):</label>
         <input
           type="number"
           step="0.01"
           id="organic-carbon"
           name="organic-carbon"
+          min="0"
+          max="20"
+          placeholder="0.00 - 20.00"
           required
         />
 
-        <label for="trihalomethanes">Trihalomethanes:</label>
+        <label for="trihalomethanes"
+          >Trihalomethanes (Range: 0 - 150 µg/L):</label
+        >
         <input
           type="number"
           step="0.01"
           id="trihalomethanes"
           name="trihalomethanes"
+          min="0"
+          max="150"
+          placeholder="0.00 - 150.00"
           required
         />
 
-        <label for="turbidity">Turbidity:</label>
+        <label for="turbidity">Turbidity (Range: 0 - 5 NTU):</label>
         <input
           type="number"
           step="0.01"
           id="turbidity"
           name="turbidity"
+          min="0"
+          max="5"
+          placeholder="0.00 - 5.00"
           required
         />
 

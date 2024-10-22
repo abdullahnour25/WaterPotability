@@ -56,7 +56,7 @@ def predict():
                 "water is not potable"  # Assuming you're predicting a single value
             )
 
-        return prediction_value
+        return render_template("result.html", prediction_value=prediction_value)
 
     return render_template("form.html")
 

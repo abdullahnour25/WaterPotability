@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediction Result</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Prediction Result</h1>
+      <p><strong>{{ prediction_value }}</strong></p>
+
+      <!-- Return button to go back to the form -->
+      <form action="/" method="get">
+        <button type="submit">Return to Prediction Page</button>
+      </form>
+    </div>
+  </body>
+</html>
