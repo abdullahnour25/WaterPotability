@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Water Quality Prediction</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Water Quality Prediction</h1>
+      <form method="POST">
+        <label for="ph">pH:</label>
+        <input type="number" step="0.01" id="ph" name="ph" required />
+
+        <label for="hardness">hardness:</label>
+        <input
+          type="number"
+          step="0.01"
+          id="hardness"
+          name="hardness"
+          required
+        />
+
+        <label for="solids">Solids:</label>
+        <input type="number" step="0.01" id="solids" name="solids" required />
+
+        <label for="chloramines">Chloramines:</label>
+        <input
+          type="number"
+          step="0.01"
+          id="chloramines"
+          name="chloramines"
+          required
+        />
+
+        <label for="sulfate">Sulfate:</label>
+        <input type="number" step="0.01" id="sulfate" name="sulfate" required />
+
+        <label for="conductivity">Conductivity:</label>
+        <input
+          type="number"
+          step="0.01"
+          id="conductivity"
+          name="conductivity"
+          required
+        />
+
+        <label for="organic-carbon">Organic Carbon:</label>
+        <input
+          type="number"
+          step="0.01"
+          id="organic-carbon"
+          name="organic-carbon"
+          required
+        />
+
+        <label for="trihalomethanes">Trihalomethanes:</label>
+        <input
+          type="number"
+          step="0.01"
+          id="trihalomethanes"
+          name="trihalomethanes"
+          required
+        />
+
+        <label for="turbidity">Turbidity:</label>
+        <input
+          type="number"
+          step="0.01"
+          id="turbidity"
+          name="turbidity"
+          required
+        />
+
+        <button type="submit">Start Prediction</button>
+      </form>
+    </div>
+  </body>
+</html>
