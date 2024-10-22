@@ -1,16 +1,12 @@
 from flask import Flask, render_template, request
 import numpy as np
-
-# import joblib as tf  # Use joblib for scikit-learn models
 import joblib
 
 # Initialize the Flask app
 app = Flask(__name__)
 
-# Load the trained model (if using a TensorFlow/Keras model)
-model = joblib.load(
-    "water_potability_model.pkl"
-)  # Change to 'model.pkl' if using scikit-learn
+# Load the model
+model = joblib.load("water_potability_model.pkl")
 
 
 # Home route
@@ -45,16 +41,14 @@ def predict():
             ]
         )
 
-        # Make prediction (if you're using a scikit-learn model, adjust this accordingly)
+        # Make prediction
         prediction = model.predict(input_data)
 
         # Convert prediction to a readable format
         if prediction:
             prediction_value = "water is potable"
         else:
-            prediction_value = (
-                "water is not potable"  # Assuming you're predicting a single value
-            )
+            prediction_value = "water is not potable"
 
         return render_template("result.html", prediction_value=prediction_value)
 
